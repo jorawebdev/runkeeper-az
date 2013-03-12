@@ -1,0 +1,25 @@
+doctype 5
+html
+  head
+    title= title
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+  body
+    #wrapper
+      #logo
+        img(src='/images/coffee.jpg')
+      #display
+        #login
+          script
+            var code = document.location.search;
+            var c = code.replace('?','');
+            var action = 'https://runkeeper.com/apps/token?grant_type=authorization_code&'+c+'&client_id=4d0d3daf0f604b85a48336400d76a407&client_secret=b604b5a6e7fa4a7ea1bbebdaee90e2b6&redirect_uri=http://localhost:3000/rktoken';
+
+          form(method='post',action='',id='myform')
+           | This form will post to obtain a token.
+           div
+             input(type='submit', value='get token')
+         script
+           var form = document.getElementById('myform');
+           form.setAttribute("action",action);
+           console.log(HealthGraph);
+    include footer

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  #wrapper
+    #logo
+        img(src='/images/coffee.jpg')
+    #display
+      | RunKeeper Login
+    include userbar
+
+    div
+      <a href='https://runkeeper.com/apps/authorize?client_id=4d0d3daf0f604b85a48336400d76a407 &redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Frkauth&response_type=code&state=auth%3D1'><img src='http://static1.runkeeper.com/images/assets/connect-blue-white-200x38.png'/></a>
+    script
+       var name='#{auth_code}';
+    include footer

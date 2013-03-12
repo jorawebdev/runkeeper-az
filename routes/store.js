@@ -58,3 +58,16 @@ exports.page = function(req, res) {
 exports.rktoken = function(req, res) {
     res.render('rktoken', { title: 'azStore - Items', username: req.session.username, items:items });
 };
+
+// handler for runkeeper authorization page
+exports.rkauth= function(req, res) {
+    var urlStr = req.url;
+    var authCode = 'null';
+    if(urlStr.match('code=')){
+      var ar = urlStr.split('=');
+      authCode = ar[2];
+    }
+    res.render('rkauth', { title: 'RunKeeper Authorization', auth_code:authCode});
+};
+
+

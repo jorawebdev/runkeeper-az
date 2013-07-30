@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -61,27 +60,6 @@ app.get('/rkauth', store.rkauth);
 app.get('/rktoken', store.rktoken);
 
 
-
-/*
-Client ID:
-4d0d3daf0f604b85a48336400d76a407
-This value is the OAuth 2.0 client ID for your application.
-
-Client Secret:
-b604b5a6e7fa4a7ea1bbebdaee90e2b6
-This value is the OAuth 2.0 shared secret for your application.
-
-Authorization URL:
-https://runkeeper.com/apps/authorize
-This is the URL to which your application should redirect the user in order to authorize access to his or her RunKeeper account.
-
-Access Token URL:
-https://runkeeper.com/apps/token
-This is the URL at which your application can convert an authorization code to an access token.
-
-De-Authorization URL:
-https://runkeeper.com/apps/de-authorize
-*/
 
 
 
